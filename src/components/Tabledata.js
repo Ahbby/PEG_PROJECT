@@ -45,6 +45,7 @@ export class Tabledata extends Component {
                             className="table table-striped table-bordered"
                             cellSpacing={0}
                             width="100%"
+                            style={{"fontSize": "0.8`em"}}
                           >
                             <thead>
                               <tr>
