@@ -12,31 +12,84 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-     <!-- Bootstrap Css -->
-    <link href="%PUBLIC_URL%/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link href="%PUBLIC_URL%/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
-    <link href="%PUBLIC_URL%/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+     <!-- Bootstrap core CSS -->
+     <link rel="stylesheet" href="%PUBLIC_URL%/assets/plugins/bootstrap/css/bootstrap.min.css">
+     <!-- Fonts  -->
+     <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/font-awesome.min.css">
+     <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/simple-line-icons.css">
+     <!-- CSS Animate -->
+     <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/animate.css">
+     <!-- DataTables-->
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/plugins/dataTables/css/dataTables.css">
+     <!-- Daterange Picker -->
+     <link rel="stylesheet" href="%PUBLIC_URL%/assets/plugins/daterangepicker/daterangepicker-bs3.css">
+     <!-- Calendar demo -->
+     <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/clndr.css">
+     <!-- Switchery -->
+     <link rel="stylesheet" href="%PUBLIC_URL%/assets/plugins/switchery/switchery.min.css">
+     <!-- Custom styles for this theme -->
+     <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/main.css">
+     <!-- Feature detection -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+     <script src="%PUBLIC_URL%/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+     <!--[if lt IE 9]>
+    <script src="assets/js/vendor/html5shiv.js"></script>
+    <script src="assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+    
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!-- JAVASCRIPT -->
-    <script src="%PUBLIC_URL%/assets/libs/jquery/jquery.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/libs/metismenu/metisMenu.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/libs/node-waves/waves.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
-
-    <script src="%PUBLIC_URL%/assets/libs/apexcharts/apexcharts.min.js"></script>
-
-    <script src="%PUBLIC_URL%/assets/js/pages/dashboard.init.js"></script>
-
-    <script src="%PUBLIC_URL%/assets/js/app.js"></script>
-
+      <!--Global JS-->
+      <script src="%PUBLIC_URL%/assets/js/vendor/jquery-1.11.1.min.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/navgoco/jquery.navgoco.min.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/pace/pace.min.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/fullscreen/jquery.fullscreen-min.js"></script>
+      <script src="%PUBLIC_URL%/assets/js/src/app.js"></script>
+      <!--Page Level JS-->
+      <script src="%PUBLIC_URL%/assets/plugins/countTo/jquery.countTo.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/weather/js/skycons.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/daterangepicker/moment.min.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/daterangepicker/daterangepicker.js"></script>
+      <!-- ChartJS  -->
+      <script src="%PUBLIC_URL%/assets/plugins/chartjs/Chart.min.js"></script>
+      <!-- Morris  -->
+      <script src="%PUBLIC_URL%/assets/plugins/morris/js/morris.min.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/morris/js/raphael.2.1.0.min.js"></script>
+      <!-- Vector Map  -->
+      <script src="%PUBLIC_URL%/assets/plugins/jvectormap/js/jquery-jvectormap-1.2.2.min.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/jvectormap/js/jquery-jvectormap-world-mill-en.js"></script>
+      <!-- Gauge  -->
+      <script src="%PUBLIC_URL%/assets/plugins/gauge/gauge.min.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/gauge/gauge-demo.js"></script>
+      <!-- Calendar  -->
+      <script src="%PUBLIC_URL%/assets/plugins/calendar/clndr.js"></script>
+      <script src="%PUBLIC_URL%/assets/plugins/calendar/clndr-demo.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+      <!-- Switch -->
+      <script src="%PUBLIC_URL%/assets/plugins/switchery/switchery.min.js"></script>
+      <!--Load these page level functions-->
+       <!--Page Leve JS -->
+    <script src="%PUBLIC_URL%/assets/plugins/dataTables/js/jquery.dataTables.js"></script>
+    <script src="%PUBLIC_URL%/assets/plugins/dataTables/js/dataTables.bootstrap.js"></script>
+    
+      <script>
+      $(document).ready(function() {
+          app.dateRangePicker();
+          app.chartJs();
+          app.weather();
+          app.spinStart();
+          app.spinStop();
+      });
+      </script>
+      <script>
+        $(document).ready(function() {
+          $('#example').dataTable();
+        });
+      </script>
   </body>
 </html>

@@ -4,266 +4,429 @@ import { Link } from "react-router-dom"
 export class Sidebar extends Component {
   render() {
     return (
-     <div>
-  <div className="vertical-menu">
-    {/* LOGO */}
-    <div className="navbar-brand-box">
-      <a href="index.html" className="logo logo-dark">
-        <span className="logo-sm">
-          <img src="assets/images/logo-sm.png" alt height={22} />
-        </span>
-        <span className="logo-lg">
-          <img src="assets/images/logo-dark.png" alt height={20} />
-        </span>
-      </a>
-      <a href="index.html" className="logo logo-light">
-        <span className="logo-sm">
-          <img src="assets/images/logo-sm.png" alt height={22} />
-        </span>
-        <span className="logo-lg">
-          <img src="assets/images/logo-light.png" alt height={20} />
-        </span>
-      </a>
-    </div>
-    <button type="button" className="btn btn-sm px-3 font-size-16 header-item waves-effect vertical-menu-btn">
-      <i className="fa fa-fw fa-bars" />
-    </button>
-    <div data-simplebar className="sidebar-menu-scroll">
-      {/*- Sidemenu */}
-      <div id="sidebar-menu">
-        {/* Left Menu Start */}
-        <ul className="metismenu list-unstyled" id="side-menu">
-          <li className="menu-title">Menu</li>
-          <li>
-            <Link to="/main/dashboard">
-              <i className="uil-home-alt" /><span className="badge badge-pill badge-primary float-right">01</span>
-              <span>Dashboard</span>
-            </Link>
-          </li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-window-section" />
-              <span>Layouts</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="layouts-horizontal.html">Horizontal</a></li>
-              <li><a href="layouts-dark-sidebar.html">Dark Sidebar</a></li>
-              <li><a href="layouts-compact-sidebar.html">Compact Sidebar</a></li>
-              <li><a href="layouts-icon-sidebar.html">Icon Sidebar</a></li>
-              <li><a href="layouts-boxed.html">Boxed Width</a></li>
-              <li><a href="layouts-preloader.html">Preloader</a></li>
-              <li><a href="layouts-colored-sidebar.html">Colored Sidebar</a></li>
-            </ul>
-          </li>
-          <li className="menu-title">Apps</li>
-          <li>
-            <a href="calendar.html" className="waves-effect">
-              <i className="uil-calender" />
-              <span>Calendar</span>
-            </a>
-          </li>
-          <li>
-            <a href="chat.html" className=" waves-effect">
-              <i className="uil-comments-alt" />
-              <span className="badge badge-pill badge-warning float-right">New</span>
-              <span>Chat</span>
-            </a>
-          </li>
-          {/* <li>
-                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="uil-store"></i>
-                    <span>Ecommerce</span>
-                </a>
-                <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="ecommerce-products.html">Products</a></li>
-                    <li><a href="ecommerce-product-detail.html">Product Detail</a></li>
-                    <li><a href="ecommerce-orders.html">Orders</a></li>
-                    <li><a href="ecommerce-customers.html">Customers</a></li>
-                    <li><a href="ecommerce-cart.html">Cart</a></li>
-                    <li><a href="ecommerce-checkout.html">Checkout</a></li>
-                    <li><a href="ecommerce-shops.html">Shops</a></li>
-                    <li><a href="ecommerce-add-product.html">Add Product</a></li>
-                </ul>
-            </li> */}
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-envelope" />
-              <span>Email</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="email-inbox.html">Inbox</a></li>
-              <li><a href="email-read.html">Read Email</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-invoice" />
-              <span>Invoices</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="invoices-list.html">Invoice List</a></li>
-              <li><a href="invoices-detail.html">Invoice Detail</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-book-alt" />
-              <span>Contacts</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="contacts-grid.html">User Grid</a></li>
-              <li><a href="contacts-list.html">User List</a></li>
-              <li><a href="contacts-profile.html">Profile</a></li>
-            </ul>
-          </li>
-          <li className="menu-title">Pages</li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-user-circle" />
-              <span>Authentication</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="auth-login.html">Login</a></li>
-              <li><a href="auth-register.html">Register</a></li>
-              <li><a href="auth-recoverpw.html">Recover Password</a></li>
-              <li><a href="auth-lock-screen.html">Lock Screen</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-file-alt" />
-              <span>Utility</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="pages-starter.html">Starter Page</a></li>
-              <li><a href="pages-maintenance.html">Maintenance</a></li>
-              <li><a href="pages-comingsoon.html">Coming Soon</a></li>
-              <li><a href="pages-timeline.html">Timeline</a></li>
-              <li><a href="pages-faqs.html">FAQs</a></li>
-              <li><a href="pages-pricing.html">Pricing</a></li>
-              <li><a href="pages-404.html">Error 404</a></li>
-              <li><a href="pages-500.html">Error 500</a></li>
-            </ul>
-          </li>
-          <li className="menu-title">Components</li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-flask" />
-              <span>UI Elements</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="ui-alerts.html">Alerts</a></li>
-              <li><a href="ui-buttons.html">Buttons</a></li>
-              <li><a href="ui-cards.html">Cards</a></li>
-              <li><a href="ui-carousel.html">Carousel</a></li>
-              <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-              <li><a href="ui-grid.html">Grid</a></li>
-              <li><a href="ui-images.html">Images</a></li>
-              <li><a href="ui-lightbox.html">Lightbox</a></li>
-              <li><a href="ui-modals.html">Modals</a></li>
-              <li><a href="ui-rangeslider.html">Range Slider</a></li>
-              <li><a href="ui-session-timeout.html">Session Timeout</a></li>
-              <li><a href="ui-progressbars.html">Progress Bars</a></li>
-              <li><a href="ui-sweet-alert.html">Sweet-Alert</a></li>
-              <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a></li>
-              <li><a href="ui-typography.html">Typography</a></li>
-              <li><a href="ui-video.html">Video</a></li>
-              <li><a href="ui-general.html">General</a></li>
-              <li><a href="ui-colors.html">Colors</a></li>
-              <li><a href="ui-rating.html">Rating</a></li>
-              <li><a href="ui-notifications.html">Notifications</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript: void(0);" className="waves-effect">
-              <i className="uil-shutter-alt" />
-              <span className="badge badge-pill badge-info float-right">6</span>
-              <span>Forms</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="form-elements.html">Basic Elements</a></li>
-              <li><a href="form-validation.html">Validation</a></li>
-              <li><a href="form-advanced.html">Advanced Plugins</a></li>
-              <li><a href="form-editors.html">Editors</a></li>
-              <li><a href="form-uploads.html">File Upload</a></li>
-              <li><a href="form-xeditable.html">Xeditable</a></li>
-              <li><a href="form-repeater.html">Repeater</a></li>
-              <li><a href="form-wizard.html">Wizard</a></li>
-              <li><a href="form-mask.html">Mask</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-list-ul" />
-              <span>Tables</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="tables-basic.html">Bootstrap Basic</a></li>
-              <li><a href="tables-datatable.html">Datatables</a></li>
-              <li><a href="tables-responsive.html">Responsive</a></li>
-              <li><a href="tables-editable.html">Editable</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-chart" />
-              <span>Charts</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="charts-apex.html">Apex</a></li>
-              <li><a href="charts-chartjs.html">Chartjs</a></li>
-              <li><a href="charts-flot.html">Flot</a></li>
-              <li><a href="charts-knob.html">Jquery Knob</a></li>
-              <li><a href="charts-sparkline.html">Sparkline</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-streering" />
-              <span>Icons</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="icons-unicons.html">Unicons</a></li>
-              <li><a href="icons-boxicons.html">Boxicons</a></li>
-              <li><a href="icons-materialdesign.html">Material Design</a></li>
-              <li><a href="icons-dripicons.html">Dripicons</a></li>
-              <li><a href="icons-fontawesome.html">Font Awesome</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-location-point" />
-              <span>Maps</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="false">
-              <li><a href="maps-google.html">Google</a></li>
-              <li><a href="maps-vector.html">Vector</a></li>
-              <li><a href="maps-leaflet.html">Leaflet</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript: void(0);" className="has-arrow waves-effect">
-              <i className="uil-share-alt" />
-              <span>Multi Level</span>
-            </a>
-            <ul className="sub-menu" aria-expanded="true">
-              <li><a href="javascript: void(0);">Level 1.1</a></li>
-              <li><a href="javascript: void(0);" className="has-arrow">Level 1.2</a>
-                <ul className="sub-menu" aria-expanded="true">
-                  <li><a href="javascript: void(0);">Level 2.1</a></li>
-                  <li><a href="javascript: void(0);">Level 2.2</a></li>
+        <aside className="sidebar sidebar-left">
+          <div className="sidebar-profile">
+            {/* <div className="avatar">
+              <img
+                className="img-circle profile-image"
+                src="../../public/assets/img/profile.jpg"
+                alt="profile"
+              />
+              <i className="on border-dark animated bounceIn" />
+            </div> */}
+            <div className="profile-body dropdown">
+              <a
+                href="javascript:void(0);"
+                className="dropdown-toggle"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <h4>
+                  Mike Adams <span className="caret" />
+                </h4>
+              </a>
+              <small className="title">Front-end Developer</small>
+              <ul className="dropdown-menu animated fadeInRight" role="menu">
+                <li className="profile-progress">
+                  <h5>
+                    <span>80%</span>
+                    <small>Profile complete</small>
+                  </h5>
+                  <div className="progress progress-xs">
+                    <div
+                      className="progress-bar progress-bar-primary"
+                      style={{ width: "80%" }}
+                    ></div>
+                  </div>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a href="javascript:void(0);">
+                    <span className="icon">
+                      <i className="fa fa-user" />
+                    </span>
+                    My Account
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span className="icon">
+                      <i className="fa fa-envelope" />
+                    </span>
+                    Messages
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span className="icon">
+                      <i className="fa fa-cog" />
+                    </span>
+                    Settings
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a href="javascript:void(0);">
+                    <span className="icon">
+                      <i className="fa fa-sign-out" />
+                    </span>
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav>
+            <h5 className="sidebar-header">Navigation</h5>
+            <ul className="nav nav-pills nav-stacked">
+              <li className="">
+                <Link to="/main/dashboard" title="Dashboard">
+                  <i className="fa  fa-fw fa-tachometer" /> Dashboard
+                </Link>
+              </li>
+              <li className="nav-dropdown">
+                <Link to="/main/table" title="UI Elements">
+                  <i className="fa  fa-fw fa-cogs" /> UI Elements
+                </Link>
+                <ul className="nav-sub">
+                  <li>
+                    <a href="ui-buttons.html" title="Buttons">
+                      Buttons
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="ui-sliders-progress.html"
+                      title="Sliders & Progress"
+                    >
+                      Sliders &amp; Progress
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui-modals-popus.html" title="Modals & Popups">
+                      Modals &amp; Popups
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui-tabs-accordions.html" title="Tabs & Accordions">
+                      Tabs &amp; Accordions
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="ui-alerts-notifications.html"
+                      title="Alerts & Notifications"
+                    >
+                      Alerts &amp; Notifications
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui-nestable-lists.html" title=" Nestable Lists">
+                      Nestable Lists
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui-panels.html" title="Panels">
+                      Panels
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui-icons.html" title="Icons">
+                      Icons
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ui-typography.html" title="Typography">
+                      Typography
+                    </a>
+                  </li>
                 </ul>
               </li>
+              <li className="nav-dropdown">
+                <a href="#" title="Forms">
+                  <i className="fa  fa-fw fa-edit" /> Forms
+                </a>
+                <ul className="nav-sub">
+                  <li>
+                    <a href="forms-components.html" title="Components">
+                      Components
+                    </a>
+                  </li>
+                  <li>
+                    <a href="forms-validation.html" title="Validation">
+                      Validation
+                    </a>
+                  </li>
+                  <li>
+                    <a href="forms-mask.html" title="Mask">
+                      Mask
+                    </a>
+                  </li>
+                  <li>
+                    <a href="forms-wizard.html" title="Wizard">
+                      Wizard
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="forms-multiple-file.html"
+                      title="Multiple File Upload"
+                    >
+                      Multiple File Upload
+                    </a>
+                  </li>
+                  <li>
+                    <a href="forms-wysiwyg.html" title="WYSIWYG Editor">
+                      WYSIWYG Editor
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-dropdown">
+                <a href="#" title="Tables">
+                  <i className="fa  fa-fw fa-th-list" /> Tables
+                </a>
+                <ul className="nav-sub">
+                  <li>
+                    <a href="tables-basic-tables.html" title="Basic Tables">
+                      Basic Tables
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tables-data-tables.html" title="Data Tables">
+                      Data Tables
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-dropdown">
+                <a href="#" title="Charts">
+                  <i className="fa  fa-fw fa-bar-chart-o" /> Charts
+                </a>
+                <ul className="nav-sub">
+                  <li>
+                    <a href="charts-chartjs.html" title="Chartjs">
+                      Chartjs
+                    </a>
+                  </li>
+                  <li>
+                    <a href="charts-c3.html" title="C3 Charts">
+                      C3 Charts
+                    </a>
+                  </li>
+                  <li>
+                    <a href="charts-morris.html" title="Morris.js Charts">
+                      Morris.js Charts
+                    </a>
+                  </li>
+                  <li>
+                    <a href="charts-sparkline.html" title="Sparkline Charts">
+                      Sparkline Charts
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-dropdown">
+                <a href="#" title="Mail">
+                  <i className="fa fa-fw fa-envelope-o" /> Mail
+                  <span className="label label-primary label-circle pull-right">
+                    8
+                  </span>
+                </a>
+                <ul className="nav-sub">
+                  <li>
+                    <a href="mail-inbox.html" title="Mail Inbox">
+                      Inbox
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mail-compose.html" title="Mail Compose">
+                      Compose Mail
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-dropdown">
+                <a href="#" title="Maps">
+                  <i className="fa fa-fw fa-map-marker" /> Maps
+                </a>
+                <ul className="nav-sub">
+                  <li>
+                    <a href="maps-google.html" title="Google Maps">
+                      Google Maps
+                    </a>
+                  </li>
+                  <li>
+                    <a href="maps-vector.html" title="Vector Maps">
+                      Vector Maps
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="../Frontend/" title="Frontend">
+                  <i className="fa  fa-fw fa-desktop" /> Front-end Theme
+                  <span className="pull-right badge badge-danger">new</span>
+                </a>
+              </li>
+              <li className="nav-dropdown">
+                <a href="#" title="Pages">
+                  <i className="fa fa-fw fa-file-text" /> Pages
+                </a>
+                <ul className="nav-sub">
+                  <li>
+                    <a href="pages-blank-page.html" title="Blank Page">
+                      Blank Page
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pages-profile.html" title="Profile">
+                      Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pages-sign-in.html" title="Sign In">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pages-sign-up.html" title="Sign Up">
+                      Sign Up
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pages-locked-screen.html" title="Locked Screen">
+                      Locked Screen
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pages-404.html" title="404 Page">
+                      404 Page
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pages-500.html" title="500 Page">
+                      500 Page
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-dropdown">
+                <a href="#" title="Menu Levels">
+                  <i className="fa  fa-fw fa-folder-open" /> Menu Levels
+                </a>
+                <ul className="nav-sub">
+                  <li>
+                    <a href="javascript:;" title="Level 2.1">
+                      <i className="fa fa-fw fa-file" /> Level 1.1
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" title="Level 2.2">
+                      <i className="fa fa-fw fa-file" /> Level 1.2
+                    </a>
+                  </li>
+                  <li className="nav-dropdown">
+                    <a href="#" title="Level 2.3">
+                      <i className="fa fa-fw fa-folder-open" /> Level 1.3
+                    </a>
+                    <ul className="nav-sub">
+                      <li>
+                        <a href="javascript:;" title="Level 3.1">
+                          <i className="fa fa-fw fa-file" /> Level 2.1
+                        </a>
+                      </li>
+                      <li className="nav-dropdown">
+                        <a href="#" title="Level 3.2">
+                          <i className="fa fa-fw fa-folder-open" /> Level 2.2
+                        </a>
+                        <ul className="nav-sub">
+                          <li>
+                            <a href="javascript:;" title="Level 4.1">
+                              <i className="fa fa-fw fa-file" /> Level 3.1
+                            </a>
+                          </li>
+                          <li className="nav-dropdown">
+                            <a href="#" title="Level 4.2">
+                              <i className="fa fa-fw fa-folder-open" /> Level
+                              3.2
+                            </a>
+                            <ul className="nav-sub">
+                              <li className="nav-dropdown">
+                                <a href="#" title="Level 5.1">
+                                  <i className="fa fa-fw fa-folder-open" />{" "}
+                                  Level 4.1
+                                </a>
+                                <ul className="nav-sub">
+                                  <li>
+                                    <a href="javascript:;" title="Level 6.1">
+                                      <i className="fa fa-fw fa-file" /> Level
+                                      5.1
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:;" title="Level 6.2">
+                                      <i className="fa fa-fw fa-file" /> Level
+                                      5.2
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="javascript:;" title="Level 5.2">
+                                  <i className="fa fa-fw fa-file" /> Level 4.2
+                                </a>
+                              </li>
+                              <li>
+                                <a href="javascript:;" title="Level 5.3">
+                                  <i className="fa fa-fw fa-file" /> Level 4.3
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="animations.html" title="CSS Animations">
+                  <i className="fa  fa-fw fa-magic" /> CSS Animations
+                </a>
+              </li>
             </ul>
-          </li>
-        </ul>
-      </div>
-      {/* Sidebar */}
-    </div>
-  </div>
-</div>
-
-    )
+          </nav>
+          <h5 className="sidebar-header">Account Settings</h5>
+          <div className="setting-list">
+            <div className="row">
+              <div className="col-xs-8">
+                <label htmlFor="check1" className="control-label">
+                  Share your status
+                </label>
+              </div>
+              <div className="col-xs-4">
+                <input
+                  type="checkbox"
+                  className="js-switch"
+                  defaultChecked
+                  id="check1"
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-8">
+                <label htmlFor="check2" className="control-label">
+                  Push Notifications
+                </label>
+              </div>
+              <div className="col-xs-4">
+                <input type="checkbox" className="js-switch" id="check2" />
+              </div>
+            </div>
+          </div>
+        </aside>
+    );
   }
 }
 

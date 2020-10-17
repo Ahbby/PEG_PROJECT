@@ -5,12 +5,18 @@ import MainApp from './components/MainApp';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-          <Route exact path='/'><Login/></Route>
-          <Route path='/main'><MainApp/></Route>
-      </Switch>
-    </Router>
+    <div id="main-wrapper" className="theme-default">
+      <Router>
+        <Switch>
+            <Route exact path='/'>
+              <Login/>
+            </Route>
+            <Route path='/main'>
+              <MainApp/>
+            </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }
 
